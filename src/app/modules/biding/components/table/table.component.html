@@ -1,23 +1,32 @@
-
 <p-table [columns]="cols" [value]="products" responsiveLayout="scroll">
     <ng-template pTemplate="header" let-columns>
         <tr>
-            <th *ngFor="let col of columns">
+            <th *ngFor="let col of columns" class="text-center">
                 {{col.header}}
             </th>
         </tr>
     </ng-template>
     <ng-template pTemplate="body" let-rowData let-columns="columns">
         <tr>
-            <td *ngFor="let col of columns">
-                {{rowData[col.field]}}
+            <td *ngFor="let col of columns" class="text-center">
+                <ng-container [ngSwitch]="col.field">
+                    <ng-container *ngSwitchCase="'edit'">
+                        <button pButton pRipple type="button" icon="pi pi-fw pi-pencil"
+                            class="p-button-rounded p-button-text"></button>
+                        <button pButton pRipple type="button" icon="pi pi-trash"
+                            class="p-button-rounded p-button-text"></button>
+                    </ng-container>
+                    <ng-container *ngSwitchDefault>
+                        {{rowData[col.field]}}
+                    </ng-container>
+                </ng-container>
             </td>
         </tr>
     </ng-template>
     <ng-template pTemplate="emptymessage" let-columns>
         <tr>
             <td [attr.colspan]="columns.length" class="text-center">
-                No records found
+                {{selectedCatogory ? 'Nothing to Display' : 'Select a Product'}}
             </td>
         </tr>
     </ng-template>

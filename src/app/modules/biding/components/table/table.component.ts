@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-table',
@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TableComponent implements OnInit {
 
+  @Input() selectedCatogory = null;
   cols: any[] = [];
 
   products = [{
@@ -19,12 +20,12 @@ export class TableComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-
     this.cols = [
       { field: 'bidAmount', header: 'Bid Amount' },
       { field: 'name', header: 'Name' },
       { field: 'email', header: 'Email' },
-      { field: 'mobile', header: 'Mobile' }
+      { field: 'mobile', header: 'Mobile' },
+      { field: 'edit', header: 'Edit/Delete' }
     ];
   }
 
