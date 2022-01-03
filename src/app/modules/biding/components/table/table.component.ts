@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Bids } from '@interfaces/product';
 
 @Component({
   selector: 'app-table',
@@ -7,15 +8,8 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class TableComponent implements OnInit {
 
-  @Input() selectedCatogory = null;
+  @Input() bids: Bids[] = [];
   cols: any[] = [];
-
-  products = [{
-    bidAmount: "dummy",
-    name: "dummy",
-    email: "dummy",
-    mobile: "dummy"
-  }];
 
   constructor() { }
 
@@ -24,8 +18,7 @@ export class TableComponent implements OnInit {
       { field: 'bidAmount', header: 'Bid Amount' },
       { field: 'name', header: 'Name' },
       { field: 'email', header: 'Email' },
-      { field: 'mobile', header: 'Mobile' },
-      { field: 'edit', header: 'Edit/Delete' }
+      { field: 'phone', header: 'Mobile' },
     ];
   }
 

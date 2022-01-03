@@ -1,0 +1,25 @@
+{
+    "productld": "123214",
+    "productName": "Paint Brush",
+    "shortDescription": "Paint Brush",
+    "detailedDescription": "Paint Brush",
+    "category": "Painting",
+    "startingPrice": "20$",
+    "bidEndDate": "12/12/2022",
+    "bids": [
+        {
+            "bidAmount": "23S",
+            "firstName": "Bravin",
+            "lastName": "Ninja",
+            "email": "bravinninja@gmail.com",
+            "phone": "8148566607"
+        },
+        {
+            "bidAmount": "25$",
+            "firstName": "Deekshith",
+            "lastName": "Ninja",
+            "email": "deekshithninja@gmail.com",
+            "phone": "7418889550"
+        }
+    ]
+}

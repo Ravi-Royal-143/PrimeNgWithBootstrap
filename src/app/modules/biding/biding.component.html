@@ -1,6 +1,11 @@
 <div class="my-3 flex justify-content-between">
-    <p-dropdown [options]="products" [(ngModel)]="selectedProduct" optionLabel="name" placeholder="Select a Product"></p-dropdown>
-    <p-button label="Add Product" icon="pi pi-plus"></p-button>
+    <div>
+        <h5>Select Product</h5>
+        <p-dropdown [options]="products" [(ngModel)]="selectedProduct" optionLabel="productName" (onChange)="fetchDetails($event)" placeholder="Select a Product"></p-dropdown>
+        <!-- <p-button label="Add Product" icon="pi pi-plus"></p-button> -->
+    </div>
 </div>
-
-<app-table [selectedCatogory]="selectedProduct"></app-table>
+<ng-template [ngIf]="productDetails">
+    <app-produt-details [productDetails]="productDetails"></app-produt-details>
+    <app-table [bids]="bids"></app-table>
+</ng-template>

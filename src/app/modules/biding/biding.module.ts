@@ -9,11 +9,13 @@ import { ButtonModule } from 'primeng/button';
 import { BidingRoutingModule } from './biding-routing.module';
 import { BidingComponent } from './biding.component';
 import { TableComponent } from './components/table/table.component';
+import { ProdutDetailsComponent } from './components/produt-details/produt-details.component';
 
 @NgModule({
   declarations: [
     BidingComponent,
-    TableComponent
+    TableComponent,
+    ProdutDetailsComponent
   ],
   imports: [
     CommonModule,

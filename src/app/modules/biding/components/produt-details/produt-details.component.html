@@ -1,0 +1,28 @@
+<div class="grid m-4" *ngIf="productDetails">
+
+    <div class="col-2 font-bold">Product Name:</div>
+    <div class="col-4">{{productDetails.productName}}</div>
+
+    <div class="col-2 font-bold">Short Description:</div>
+    <div class="col-4">{{productDetails.shortDescription}}</div>
+
+    <div class="col-2 font-bold">Detailed Description:</div>
+    <div class="col-10">{{productDetails.detailedDescription}}</div>
+
+    <!-- <div class="col-2 font-bold">Starting Price:</div>
+    <div class="col-4">{{productDetails.startingPrice | currency}}</div>
+    
+    <div class="col-2 font-bold">Bid End Date:</div>
+    <div class="col-4">{{productDetails.bidEndDate | date:"MM/dd/yy"}}</div>
+     -->
+
+    <div class="col-2 font-bold">Starting Price:</div>
+    <div class="col-4">{{productDetails.startingPrice}}</div>
+
+    <div class="col-2 font-bold">Bid End Date:</div>
+    <div class="col-4">{{productDetails.bidEndDate}}</div>
+    
+    <div class="col-2 font-bold">Category:</div>
+    <div class="col-10">{{productDetails.category}}</div>
+
+</div>

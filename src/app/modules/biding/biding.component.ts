@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Bids, ProductDetailsRes, ProductRes, ProductSuggestions } from '@interfaces/product';
+import { ProductService } from 'src/app/services/product.service';
 
 @Component({
   selector: 'app-biding',
@@ -7,16 +9,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BidingComponent implements OnInit {
 
-  products = [
-    { name: 'Product 1', code: 'NY' },
-    { name: 'Product 2', code: 'RM' },
-    { name: 'Product 3', code: 'LDN' }
-  ];
+  products: ProductSuggestions[] = [];
+  productDetails: ProductDetailsRes;
 
   selectedProduct = null;
-  constructor() { }
+  bids = null;
+
+  constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
+    this.productService.fetchProduct().subscribe((res: ProductRes) => {
+      this.products = res?.products;
+    });
   }
 
+  fetchDetails(data: any) {
+    this.productService.fetchProductDetails(data.value.productid).subscribe((res: ProductDetailsRes) => {
+      this.productDetails = res;
+      this.bids = res.bids.map((data: Bids) => {
+        return {
+          ...data,
+          name: `${data.firstName} ${data.lastName}`
+        }
+      })
+    })
+  }
 }

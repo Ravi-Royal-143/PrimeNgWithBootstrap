@@ -1,4 +1,4 @@
-<p-table [columns]="cols" [value]="products" responsiveLayout="scroll">
+<p-table [columns]="cols" [value]="bids" responsiveLayout="scroll">
     <ng-template pTemplate="header" let-columns>
         <tr>
             <th *ngFor="let col of columns" class="text-center">
@@ -26,7 +26,7 @@
     <ng-template pTemplate="emptymessage" let-columns>
         <tr>
             <td [attr.colspan]="columns.length" class="text-center">
-                {{selectedCatogory ? 'Nothing to Display' : 'Select a Product'}}
+                {{bids ? 'Nothing to Display' : 'Select a Product'}}
             </td>
         </tr>
     </ng-template>
