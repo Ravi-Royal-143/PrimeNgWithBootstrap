@@ -10,8 +10,8 @@ export class ProductService {
 
   constructor(private http: HttpClient) { }
 
-  fetchProduct(): Observable<ProductRes> {
-    return this.http.get<ProductRes>("assets/data/products.json");
+  fetchProduct(): Observable<ProductRes[]> {
+    return this.http.get<ProductRes[]>("assets/data/products.json");
   }
 
   fetchProductDetails(selectedProduct: string) {

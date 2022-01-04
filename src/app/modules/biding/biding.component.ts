@@ -18,8 +18,8 @@ export class BidingComponent implements OnInit {
   constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
-    this.productService.fetchProduct().subscribe((res: ProductRes) => {
-      this.products = res?.products;
+    this.productService.fetchProduct().subscribe((res: ProductRes[]) => {
+      this.products = res;
     });
   }
 

@@ -1,12 +1,10 @@
-{
-    "products": [
-        {
-            "productid": "12345",
-            "productName": "Paint Brush"
-        },
-        {
-            "productid": "12346",
-            "productName": "Water Paint"
-        }
-    ]
-}
+[
+    {
+        "productid": "12345",
+        "productName": "Paint Brush"
+    },
+    {
+        "productid": "12346",
+        "productName": "Water Paint"
+    }
+]

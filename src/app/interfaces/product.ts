@@ -1,5 +1,6 @@
 export interface ProductRes {
-    products: Products[];
+    productid: string;
+    productName: string;
 }
 
 export interface Products {
