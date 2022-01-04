@@ -4,11 +4,4 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-empty-route',
   template: ''
 })
-export class EmptyRouteComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
-}
+export class EmptyRouteComponent {}
