@@ -1,8 +1,8 @@
 <div class="my-3 flex justify-content-between">
-    <div>
+    <div class="w-full">
         <h5>Select Product</h5>
-        <p-dropdown [options]="products" [(ngModel)]="selectedProduct" optionLabel="productName" (onChange)="fetchDetails($event)" placeholder="Select a Product"></p-dropdown>
-        <!-- <p-button label="Add Product" icon="pi pi-plus"></p-button> -->
+        <p-dropdown [style]="{'width':'200px'}" [options]="products" [(ngModel)]="selectedProduct" optionLabel="productName" placeholder="Select a Product"></p-dropdown>
+        <p-button class="ml-2" label="Fetch Details" (onClick)="fetchDetails()"></p-button>
     </div>
 </div>
 <ng-template [ngIf]="productDetails">

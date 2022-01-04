@@ -23,8 +23,8 @@ export class BidingComponent implements OnInit {
     });
   }
 
-  fetchDetails(data: any) {
-    this.productService.fetchProductDetails(data.value.productid).subscribe((res: ProductDetailsRes) => {
+  fetchDetails() {
+    this.productService.fetchProductDetails(this.selectedProduct.productid).subscribe((res: ProductDetailsRes) => {
       this.productDetails = res;
       this.bids = res.bids.map((data: Bids) => {
         return {
