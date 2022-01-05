@@ -1,6 +1,8 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { BidingComponent } from './biding.component';
+import { BidingModule } from './biding.module';
 
 describe('BidingComponent', () => {
   let component: BidingComponent;
@@ -8,7 +10,10 @@ describe('BidingComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ BidingComponent ]
+      imports: [
+        HttpClientTestingModule,
+        BidingModule
+      ]
     })
     .compileComponents();
   });
