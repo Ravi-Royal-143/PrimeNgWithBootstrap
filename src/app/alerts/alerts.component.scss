@@ -1,7 +1,19 @@
 .alert {
     background-color: lightcoral;
     border: 0;
+    border-radius: 0;
     border-left: 4px;
     border-style: solid;
     border-color: red;
+    padding-right: 115px;
+}
+
+.eclipse {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.hover:hover {
+    cursor: pointer;
 }
