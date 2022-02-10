@@ -1,19 +1,27 @@
-<div class="relative alert py-1">
-    <div [ngClass]="{'eclipse': expanded}">
-        testingtesting testing testing testing testing testing testing testing testing testingtesting testing testing
-        testing testing testing testing testing testing testingtesting testing testing testing testing testing testing
-        testing testing testingtesting testing testing testing testing testing testing testing testing testingtesting
-        testing testing testing testing testing testing testing testing testing testing testing testing testing testing
-        testing testing testing testing
+<div class="relative alert py-1 flex">
+    <div [ngClass]="{ eclipse: expanded }" class="block parent">
+      <div class="child">132457890 testing</div>
+      <div class="child">132457890 testing test ahdhad</div>
+      <div class="child">132457890 testing</div>
+      <div class="child">132457890 testing</div>
+      <div class="child">132457890 testing</div>
+      <div class="child">132457890 testing</div>
     </div>
     <div class="absolute right-0 pr-2 top-0">
-        <div>
-            <div class="inline-block">
-                <button pButton class="pi pi-pencil p-2 p-button-text" label="Edit"></button>
-                <div class="p-2 hover" [ngClass]="expanded ? 'pi pi-angle-down' : 'pi pi-angle-up'"
-                    (click)="expanded = !expanded">
-                </div>
-            </div>
+      <div>
+        <div class="inline-block">
+          <button
+            pButton
+            class="pi pi-pencil p-2 p-button-text"
+            label="Edit"
+          ></button>
+          <div
+            class="p-2 hover"
+            [ngClass]="expanded ? 'pi pi-angle-down' : 'pi pi-angle-up'"
+            (click)="expanded = !expanded"
+          ></div>
         </div>
+      </div>
     </div>
-</div>
+  </div>
+  
