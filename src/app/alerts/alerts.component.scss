@@ -5,29 +5,32 @@
     border-left: 4px;
     border-style: solid;
     border-color: red;
-    padding-right: 115px;
-  }
-  
-  .eclipse {
+}
+
+.eclipse {
     white-space: normal !important;
-  }
-  
-  .hover:hover {
+}
+
+.hover:hover {
     cursor: pointer;
-  }
-  
-  .child {
+}
+
+.child {
     cursor: default;
     display: inline-flex;
     align-items: center;
     flex: 0 0 auto;
-  }
-  
-  .parent {
+}
+
+.parent {
     display: block;
     white-space: nowrap;
     cursor: pointer;
     overflow: hidden;
     text-overflow: ellipsis;
-  }
-  
+}
+
+.parent1 {
+    flex: 1 1 0;
+    min-width: 0;
+}
