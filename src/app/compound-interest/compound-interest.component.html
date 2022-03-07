@@ -1,0 +1,58 @@
+<div class="centerOfScreen" [formGroup]="compoundInt">
+    <div class="col-12 xl:col-5 md:col-12 xs:col-12">
+        <div class="p-fluid justify-content-center chat-border">
+            <div class="col-12">
+                <span class="royal-ft-wt-700">வட்டி</span>
+            </div>
+            <div class="col-12">
+                <div class="p-inputgroup">
+                    <span class="p-inputgroup-addon"><i class="pi pi-money-bill"></i></span>
+                    <input type="number" pInputText placeholder="பனம்" formControlName="principal">
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="p-inputgroup">
+                    <span class="p-inputgroup-addon"><i class="pi pi-percentage"></i></span>
+                    <input type="number" pInputText placeholder="வட்டி" formControlName="interest">
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="p-inputgroup">
+                    <span class="p-inputgroup-addon"><i class="pi pi-calendar"></i></span>
+                    <input type="number" pInputText placeholder="மாதம்" formControlName="period">
+                </div>
+            </div>
+            
+            <div class="col-12">
+                <p-button label="கனுகா" (onClick)="onSubmit()"></p-button>
+            </div>
+        </div>
+
+        <div class="col-12 text-center">
+            <span class="font-bold">
+                {{totalAmount}}
+            </span>
+        </div>
+
+        <div>
+            <p-table [columns]="cols" [value]="tableVal" responsiveLayout="scroll" [scrollable]="true" scrollHeight="400px">
+                <ng-template pTemplate="header" let-columns>
+                    <tr>
+                        <th *ngFor="let col of columns">
+                            {{col.header}}
+                        </th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-rowData let-columns="columns">
+                    <tr>
+                        <td *ngFor="let col of columns">
+                            {{rowData[col.field]}}
+                        </td>
+                    </tr>
+                </ng-template>
+            </p-table>
+        </div>
+    </div>
+
+
+</div>
