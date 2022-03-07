@@ -81,8 +81,14 @@ cordova emulate android
 
 ## to create a file
 
+ng build --prod --aot
 cordova build --release android or cordova build android
 
 ## to create apk go to andriod studio and point the project to the path platforms/android
 
 in the top bar there will be the way to build the project in the apk format
+
+
+# open android folder in android studio 
+
+start "" "C:\Program Files\Android\Android Studio\bin\studio64.exe" "C:\Users\Ravi Royal\Documents\Studies\angular\angularToMobile\compoundInterest\platforms\android"
