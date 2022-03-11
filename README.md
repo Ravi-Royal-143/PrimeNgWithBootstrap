@@ -92,3 +92,9 @@ in the top bar there will be the way to build the project in the apk format
 # open android folder in android studio 
 
 start "" "C:\Program Files\Android\Android Studio\bin\studio64.exe" "C:\Users\Ravi Royal\Documents\Studies\angular\angularToMobile\compoundInterest\platforms\android"
+
+keytool -genkey -v -keystore keyData.keystore -alias key1 -keyalg RSA -keysize 2048 -validity 10000
+
+jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore keyData.keystore "C:\Users\Ravi Royal\Documents\Studies\angular\angularToMobile\compoundInterestCopied\platforms\android\app\build\outputs\apk\debug\app-debug.apk"  key1
+
+zipalign -v 4 app-release-unsigned.apk(path) app-release-signed.apk(path)
