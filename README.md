@@ -98,3 +98,8 @@ keytool -genkey -v -keystore keyData.keystore -alias key1 -keyalg RSA -keysize 2
 jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore keyData.keystore "C:\Users\Ravi Royal\Documents\Studies\angular\angularToMobile\compoundInterestCopied\platforms\android\app\build\outputs\apk\debug\app-debug.apk"  key1
 
 zipalign -v 4 app-release-unsigned.apk(path) app-release-signed.apk(path)  -- zipalign will be present in C:\Windows\System32\cmd.exe
+
+apksigner sign --ks [KEY_STORE_FILE] --ks-key-alias [ALIAS] [APK_FILE]
+
+
+after zipalign sign the apk
