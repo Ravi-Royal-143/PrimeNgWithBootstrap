@@ -18,7 +18,8 @@ export class CompoundInterestComponent implements OnInit {
   tableVal: any = [];
   cols = [];
 
-  totalAmount: number = 0;
+  totalAmountCI: number = 0;
+  totalAmountSI: number = 0;
   constructor(private fb: FormBuilder) { }
 
   ngOnInit(): void {
@@ -34,7 +35,9 @@ export class CompoundInterestComponent implements OnInit {
     const p = principal, i = interest, t = period, n = compoundPerYear;
     const r = i / 100;
 
-    this.totalAmount = this.compoundIntCal(p, n, r, t);
+    this.totalAmountCI = this.compoundIntCal(p, n, r, t);
+    this.totalAmountSI = p + (p * r * t);
+    console.log(this.totalAmountSI);
     this.tableVal = [];
     for (let i = 0; i < period; i++) {
       const _t = i + 1;
