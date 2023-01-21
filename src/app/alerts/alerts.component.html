@@ -9,12 +9,13 @@
     </div>
     <div class="flex flex-order-1 flex-auto min-w-0">
         <div [ngClass]="{ eclipse: expanded }" class="block parent">
-            <div class="child">132457890 testing x</div>
-            <div class="child">132457890 testing 132457890 testing 132457890 testing 132457890 testing x</div>
-            <div class="child">132457890 testing 132457890 testing 132457890 testing 132457890 testing x</div>
-            <div class="child">132457890 testing 132457890 testing 132457890 testing 132457890 testing x</div>
-            <div class="child">132457890 testing 132457890 testing 132457890 testing 132457890 testing x</div>
-            <div class="child">132457890 testing 132457890 testing 132457890 testing 132457890 testing x</div>
+            <ng-container *ngFor="let data of datasss; let i=index">
+                <div class="child" id="index-{{i}}">
+                    <div *ngIf="isTextOverflow('index-' + i)" class="teams-count">
+                        {{i}} - {{data}}
+                      </div>
+                </div>
+            </ng-container>
             <ng-content></ng-content>
         </div>
     </div>

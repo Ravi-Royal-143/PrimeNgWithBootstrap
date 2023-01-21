@@ -1,0 +1,6 @@
+{
+    "/api": {
+      "target": " https://courses.decodedfrontend.io",
+      "secure": false
+    }
+  }
