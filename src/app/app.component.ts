@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'basic';
+  @ViewChild('inputTimeRef',{static: false }) inputTimeRef!:ElementRef
+
+  show() {
+    console.log(this.inputTimeRef)
+    this.open()
+  }
+
+  open() {
+    this.inputTimeRef.nativeElement.showPicker();
+  }
 }
