@@ -1,3 +1,10 @@
+<div>
+  <button (click)="navigation('')">home</button>
+  <button (click)="navigation('/test')">test</button>
+  <button (click)="chageActiveModule()">change module</button>
+</div>
 <div class="m-3"> 
   Basic
+  <router-outlet></router-outlet>
 </div>
+{{appservice.isActive}}
